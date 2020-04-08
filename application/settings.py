@@ -162,11 +162,13 @@ LOGGING = {
 
 STATIC_URL = "/static/"
 
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Celery configuration
 
-CELERY_BROKER_URL = os.environ.get("BROKER_URL")
+CELERY_BROKER_URL = os.environ.get("CLOUDAMQP_URL")
 
 CELERY_RESULT_BACKEND = CELERY_BROKER_URL
 
