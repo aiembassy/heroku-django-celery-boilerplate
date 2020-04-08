@@ -1,0 +1,3 @@
+# This directory contains all the Docker volumes data and is not required
+# to be included in the respository.
+.data/*

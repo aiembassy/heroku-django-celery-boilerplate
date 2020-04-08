@@ -3,3 +3,6 @@
 
 # Ignoring Heroku files in their target versions
 .env
+
+# Project specific files that should not be exposed
+db.sqlite3

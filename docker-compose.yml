@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  web:
+    build: "."
+    image: "heroku-django-celery-boilerplate"
+    volumes:
+      - "./:/app"
+    ports:
+      - "5000:5000"
