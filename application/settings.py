@@ -163,3 +163,20 @@ LOGGING = {
 STATIC_URL = "/static/"
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+# Celery configuration
+
+CELERY_BROKER_URL = os.environ.get("BROKER_URL")
+
+CELERY_RESULT_BACKEND = CELERY_BROKER_URL
+
+CELERY_BEAT_SCHEDULE = {
+    #
+    # A list of scheduled tasks
+    #
+    # "your-complex-task-name": {
+    #     "task": "task_function_name",
+    #     "schedule": 60.0,
+    # }
+    #
+}

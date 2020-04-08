@@ -30,7 +30,12 @@ Heroku one.
 #### First steps
 
 1. Login to your Heroku account from the console using `heroku login`.
-2. Create a new Heroku project with `heroku create [APP_NAME]`.
+2. Create a new Heroku project with `heroku create [APP_NAME]`. 
+   This command allows to have several 
+3. Provision a PostgreSQL database with 
+   `heroku addons:create heroku-postgresql:hobby-dev`.
+4. Provision a RabbitMQ task queue with `heroku addons:create cloudamqp:lemur` 
+   (that requires to have a credit card configured on Heroku).
 
 ### Choosing Celery broker
 
@@ -67,6 +72,8 @@ For the purposes of this boilerplate, we defines an .env.example file that might
 be used as a base for different environments. Providing a postfix to the file 
 name, like ".env.production" is a common strategy, and we'll do so in all the
 examples below.
+
+See: https://devcenter.heroku.com/articles/multiple-environments
 
 ### Important files
 
