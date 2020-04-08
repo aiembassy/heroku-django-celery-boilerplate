@@ -1,2 +1,5 @@
+# IDE specific directories
+.idea/
+
+# Ignoring Heroku files in their target versions
 .env
-Procfile
