@@ -30,7 +30,7 @@ Heroku one.
 #### First steps
 
 1. Login to your Heroku account from the console using `heroku login`.
-2. Create a new Heroku project with `heroku create [APP_NAME]`. 
+2. Create a new Heroku project with `heroku create [APP_NAME]git`. 
    This command allows to have several 
 3. Provision a PostgreSQL database with 
    `heroku addons:create heroku-postgresql:hobby-dev`.

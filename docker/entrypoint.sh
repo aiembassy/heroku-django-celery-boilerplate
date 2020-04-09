@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-heroku local:start web
+heroku local:start
