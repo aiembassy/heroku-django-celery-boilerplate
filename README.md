@@ -30,12 +30,22 @@ Heroku one.
 #### First steps
 
 1. Login to your Heroku account from the console using `heroku login`.
-2. Create a new Heroku project with `heroku create [APP_NAME]git`. 
-   This command allows to have several 
+2. Create a new Heroku project with `./heroku.py create [APP_NAME]`. 
 3. Provision a PostgreSQL database with 
-   `heroku addons:create heroku-postgresql:hobby-dev`.
-4. Provision a RabbitMQ task queue with `heroku addons:create cloudamqp:lemur` 
-   (that requires to have a credit card configured on Heroku).
+   `./heroku.py addons:create heroku-postgresql:hobby-dev`.
+4. Provision a RabbitMQ task queue with 
+   `./heroku.py addons:create cloudamqp:lemur` (that requires to have a credit 
+   card configured on Heroku).
+5. Deploy the empty project with `./heroku.py deploy`.
+6. Open the project in the browser `./heroku.py open`
+   
+```
+./heroku.py create [APP_NAME]-staging
+./heroku.py addons:create heroku-postgresql:hobby-dev
+./heroku.py addons:create cloudamqp:lemur
+./heroku.py deploy
+./heroku.py open
+```
 
 ### Choosing Celery broker
 

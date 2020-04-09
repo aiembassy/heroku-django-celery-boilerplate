@@ -1,0 +1,8 @@
+# This file contains the mapping between the git branches to the target Heroku
+# environments. All the local changes are available automatically on the
+# development environments, however, whenever any commit is pushed to the
+# restricted branches (keys below), then the corresponding Heroku environment
+# might be updated.
+
+master=production
+develop=staging

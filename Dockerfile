@@ -10,7 +10,7 @@ RUN curl https://cli-assets.heroku.com/install.sh | sh
 RUN mkdir -p /app
 ADD requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
-ADD docker/entrypoint.sh /entrypoint.sh
+ADD .docker/entrypoint.sh /entrypoint.sh
 
 COPY . /app
 WORKDIR /app

@@ -17,7 +17,7 @@ services:
     image: "postgres:12.2-alpine"
     restart: "always"
     volumes:
-      - "./docker/.data/postgres:/var/lib/postgresql/data"
+      - "./.docker/.data/postgres:/var/lib/postgresql/data"
     env_file:
       - ".env"
 
@@ -27,6 +27,6 @@ services:
       - "5672:5672"
       - "15672:15672"
     volumes:
-      - "./docker/.data/rabbitmq:/var/lib/rabbitmq"
+      - "./.docker/.data/rabbitmq:/var/lib/rabbitmq"
     env_file:
       - ".env"
