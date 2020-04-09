@@ -42,7 +42,7 @@ if "deploy" == sys.argv[1]:
     target_env_variables = dotenv.main.DotEnv(f".env.{target_env}")
     for variable_name, variable_value in target_env_variables.dict().items():
         get_or_create_heroku_config(variable_name, variable_value, target_env)
-    target_command = ["git", "push", target_env, current_branch]
+    target_command = ["git", "push", target_env, f"{current_branch}:master"]
 else:
     target_command = ["heroku"] + sys.argv[1:] + ["--remote", target_env]
 
