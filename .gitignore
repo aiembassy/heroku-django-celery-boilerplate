@@ -1,3 +1,7 @@
+# Python compiled files
+*.pyc
+__pycache__/
+
 # IDE specific directories
 .idea/
 
@@ -6,3 +10,4 @@
 
 # Project specific files that should not be exposed
 db.sqlite3
+celerybeat-schedule

@@ -1,2 +1,2 @@
 web: gunicorn application.wsgi
-worker: celery worker --app=application.celery
+worker: celery worker -B -l info -A application.celery

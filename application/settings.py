@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "scheduler.apps.SchedulerConfig",
 ]
 
 MIDDLEWARE = [
@@ -176,11 +177,13 @@ CELERY_RESULT_BACKEND = CELERY_BROKER_URL
 
 CELERY_BEAT_SCHEDULE = {
     #
-    # A list of scheduled tasks
+    # A list of scheduled tasks which are supposed to be launched in selected
+    # intervals. By default, a simple heartbeat task is implemented so the
+    # logs should show the Celery worker is running fine.
     #
-    # "your-complex-task-name": {
-    #     "task": "task_function_name",
-    #     "schedule": 60.0,
-    # }
-    #
+    "celery_heartbeat": {
+        "task": "celery_heartbeat",
+        "schedule": 60.0,
+    }
+
 }
